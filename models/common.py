@@ -770,6 +770,7 @@ class Detections:
                                 'conf': conf,
                                 'cls': cls,
                                 'label': label,
+                                'filepath': str(increment_path(file).with_suffix('.jpg')),
                                 'im': save_one_box(box, im, file=file, save=save)})
                         else:  # all others
                             annotator.box_label(box, label if labels else '', color=colors(cls))
