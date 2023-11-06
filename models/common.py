@@ -760,7 +760,7 @@ class Detections:
                     s += f"{n} {self.names[int(c)]}{'s' * (n > 1)}, "  # add to string
                 s = s.rstrip(', ')
                 if show or save or render or crop:
-                    annotator = Annotator(im, example=str(self.names))
+                    annotator = Annotator(im, example=str(self.names), line_width=1)
                     for *box, conf, cls in reversed(pred):  # xyxy, confidence, class
                         label = f'{self.names[int(cls)]} {conf:.2f}'
                         if crop:
