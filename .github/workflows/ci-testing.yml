@@ -83,7 +83,7 @@ jobs:
         shell: bash  # for Windows compatibility
       - name: Check environment
         run: |
-          python -c "import utils; utils.notebook_init()"
+          python -c "import yolo_utils as utils; utils.notebook_init()"
           echo "RUNNER_OS is ${{ runner.os }}"
           echo "GITHUB_EVENT_NAME is ${{ github.event_name }}"
           echo "GITHUB_WORKFLOW is ${{ github.workflow }}"
